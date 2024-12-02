@@ -73,7 +73,7 @@ namespace SharpSpray
                 {
                     int UserCount = UserList.Count;
                     Console.WriteLine("[+] Successfully collected " + UserCount + " usernames from Active Directory.");
-                    lockoutThreshold = (int)dEntry.Properties["minPwdLength"].Value;
+                    lockoutThreshold = (int)dEntry.Properties["lockoutThreshold"].Value;
                     Console.WriteLine("[*] The Lockout Threshold for the current domain is " + lockoutThreshold + ".");
                     minPwdLength = (int)dEntry.Properties["minPwdLength"].Value;
                     Console.WriteLine("[*] The Min Password Length for the current domain is " + minPwdLength + ".");
